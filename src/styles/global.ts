@@ -17,6 +17,7 @@ export default createGlobalStyle`
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    background-color: rgba(226,125,125, 0.8);
   }
 
   a {

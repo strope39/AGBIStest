@@ -1,9 +1,17 @@
 import React from "react";
+import { useStores } from "../../store/useStores";
 
-type Props = { isDone: boolean };
+import * as S from "./styles";
 
-const ComplitedTodo = (props: Props) => {
-    return <div>{props.isDone ? "Выполнено" : "Не выполнено"}</div>;
+type Props = { isDone: boolean; id: number };
+
+const ComplitedTodo = ({ isDone, id }: Props) => {
+    const todoStore = useStores().todoStore;
+    const readyHandler = () => {
+        todoStore.isDoneItem(id);
+    };
+
+    return <S.Done onClick={readyHandler} isDone={isDone}></S.Done>;
 };
 
 export default ComplitedTodo;

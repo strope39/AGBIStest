@@ -4,3 +4,8 @@ export interface ITodoItem {
     description: string;
     isDone: boolean;
 }
+
+export const enum langEnum {
+    ru = "ru",
+    en = "en",
+}
